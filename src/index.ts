@@ -1,5 +1,7 @@
 import { createServer, IncomingMessage, ServerResponse } from 'http';
 
+const PORT = process.env.PORT || 8080;
+
 const requestListener = (req: IncomingMessage, res: ServerResponse) => {
   res.writeHead(200);
   console.log('Request!');
@@ -8,6 +10,6 @@ const requestListener = (req: IncomingMessage, res: ServerResponse) => {
 
 const server = createServer(requestListener);
 
-server.listen(8080, () => {
-  console.log('listening on port 8080');
+server.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`);
 });
