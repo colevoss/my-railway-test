@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8080;
 const requestListener = (req: IncomingMessage, res: ServerResponse) => {
   res.writeHead(200);
   console.log('Request!');
-  res.end('Hello, World!');
+  res.end('Hello, Railway!');
 };
 
 const server = createServer(requestListener);
